@@ -6,22 +6,14 @@ document.querySelector('#dark-mode-toggle').addEventListener('click', () => {
     document.querySelector('meta[name="theme-color"').setAttribute('content', isDarkMode ? '#1a1a2e' : '#fff');
 });
 
-// initial value
-
 // screens
 const start_screen = document.querySelector('#start-screen');
 const game_screen = document.querySelector('#game-screen');
 const pause_screen = document.querySelector('#pause-screen');
 const result_screen = document.querySelector('#result-screen');
-
-// ----------
 const cells = document.querySelectorAll('.main-grid-cell');
-
 const name_input = document.querySelector('#input-name');
-
 const number_inputs = document.querySelectorAll('.number');
-
-
 const player_name = document.querySelector('#player-name');
 const game_level = document.querySelector('#game-level');
 const game_time = document.querySelector('#game-time');
