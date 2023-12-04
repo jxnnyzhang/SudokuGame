@@ -160,6 +160,53 @@ nav {
     text-align: center;
 }
 
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 450px;
+    top: 200px;
+    overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #7ac6fd;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    color: var(--white);
+    border: 1px solid #7ac6fd;
+    width: 80%; /* Could be more or less, depending on screen size */
+  }
+
+  /* Styles for unordered lists in the modal */
+  .modal-content ul {
+    list-style-type: disc; /* This ensures the bullet points are discs (default style) */
+    padding-left: 20px; /* This adds some space on the left for the bullets */
+  }
+
+/* Styles for list items in the modal */
+  .modal-content li {
+    margin-bottom: 10px; /* This adds some space between the list items */
+    text-align: left; /* Optional: Aligns text to the left */
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #fffdfd;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }  
+
 .btn {
     height: 80px;
     width: 280px;

@@ -18,6 +18,11 @@ const player_name = document.querySelector('#player-name');
 const game_level = document.querySelector('#game-level');
 const game_time = document.querySelector('#game-time');
 
+// Get the modal
+const modal = document.getElementById("rulesModal");
+// Get the <span> element that closes the modal
+const span = document.getElementsByClassName("close")[0];
+
 const result_time = document.querySelector('#result-time');
 
 let level_index = 0;
@@ -32,7 +37,6 @@ let su_answer = undefined;
 
 let selected_cell = -1;
 
-// --------
 
 const getGameInfo = () => JSON.parse(localStorage.getItem('game'));
 
@@ -49,7 +53,6 @@ const initGameGrid = () => {
         index++;
     }
 }
-// ----------------
 
 const setPlayerName = (name) => localStorage.setItem('player_name', name);
 const getPlayerName = () => localStorage.getItem('player_name');
@@ -352,6 +355,7 @@ document.querySelector('#btn-play').addEventListener('click', () => {
             name_input.focus();
         }, 500);
     }
+    modal.style.display = "block";
 });
 
 document.querySelector('#btn-continue').addEventListener('click', () => {
@@ -364,6 +368,21 @@ document.querySelector('#btn-continue').addEventListener('click', () => {
             name_input.classList.remove('input-err');
             name_input.focus();
         }, 500);
+    }
+});
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Event listener to close the modal when clicking on the <span> (x)
+span.onclick = closeModal;
+
+// Event listener to close the modal when clicking outside of it
+window.addEventListener('click', function(event) {
+    if (event.target == modal) {
+        closeModal();
     }
 });
 
@@ -401,7 +420,7 @@ document.querySelector('#btn-delete').addEventListener('click', () => {
 document.addEventListener('DOMContentLoaded', () => {
     // Event listener for the 'Sudoku' text in the navigation
     const navLogo = document.getElementById('nav-logo');
-    navLogo.addEventListener('click', returnStartScreen);
+    navLogo.addEventListener('click', returnStartScreen);  
 });
 
 
