@@ -319,7 +319,10 @@ const returnStartScreen = () => {
 }
 
 // Add this event listener in the section where you attach other button event listeners
-document.querySelector('#btn-restart').addEventListener('click', restartGame);
+document.querySelector('#btn-restart').addEventListener('click', () => {
+    restartGame();
+    closeModal();
+});
 
 function restartGame() {
     // Reset the game state and timer
@@ -389,6 +392,7 @@ window.addEventListener('click', function(event) {
 document.querySelector('#btn-pause').addEventListener('click', () => {
     pause_screen.classList.add('active');
     pause = true;
+    closeModal();
 });
 
 document.querySelector('#btn-resume').addEventListener('click', () => {
@@ -415,6 +419,7 @@ document.querySelector('#btn-delete').addEventListener('click', () => {
     su_answer[row][col] = 0;
 
     removeErr();
+    closeModal();
 })
 
 document.addEventListener('DOMContentLoaded', () => {
