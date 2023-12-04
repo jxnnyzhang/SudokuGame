@@ -165,7 +165,7 @@ nav {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    left: 450px;
+    left: 480px;
     top: 200px;
     overflow: auto; /* Enable scroll if needed */
   }
